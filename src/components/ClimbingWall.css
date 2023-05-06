@@ -31,19 +31,23 @@
 }
 
 .WallCardContent > a {
-  color: rgb(1, 71, 1)
+  color: rgb(24, 94, 24)
 }
 
 .WallCardContent > a:visited {
-  color: darkolivegreen;
+  color: rgb(34, 43, 19);
 }
 
 .WallCardContent > p {
   font-size: 1.3em;
   color: rgb(0,44,0);
 }
-  
-/* smaller screens and tbalets */
+
+.ClimbingWall-title > h1 {
+  font-size: 1.5em;
+}
+
+/* smaller screens and tablets */
 @media only screen and (max-width: 1100px) {
   .WallList {
     grid-template-columns: 1fr 1fr;
@@ -51,7 +55,7 @@
 }
 
 /* Small screens mobile */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .WallList {
     grid-template-columns: 1fr;
   }

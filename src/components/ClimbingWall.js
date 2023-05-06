@@ -10,35 +10,41 @@ function ClimbingWall(props) {
     const inName = obj.area_name.toLowerCase().includes(query.toLowerCase())
     return inName }).map((wall) => {
     return (
-      <div className="WallCard" key={wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join
-      ('_').toLowerCase()} >
-        <img src={`${process.env.PUBLIC_URL}/images/wall${wall.area_name.length%7}.jpg`} alt="placeholder" />
-        <div className="WallCardContent">
+      <section 
+        className="WallCard" key={wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()} 
+        role="article"
+      >
+        <img src={`${process.env.PUBLIC_URL}/images/wall${wall.area_name.length%7}.jpg`} alt="outdoor climbing wall" />
+        <section className="WallCardContent">
           <Link 
             className="ClimbingWall-title"
             to={`/wall/${wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()}`}
+            role="link"
             >
             <h1>{allWalls[wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()].area_name}</h1>
           </Link>
           <p>Number of routes: {allWalls[wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()].totalClimbs}</p>
-        </div>
-      </div>
+        </section>
+      </section>
     )
   })
 
   return (
-    <div className="RouteSearch">
-      <form>
+    <section className="RouteSearch" aria-label="Wall search">
+      <form role="search">
+        <label htmlFor="wall-search">Filter walls by name:</label>
         <input
           value={query}
-          placeholder="Search walls by name:"
+          placeholder="Filter walls by name:"
           onChange={(evt) => setQuery(evt.target.value)}
+          type="search"
         />
       </form>
-      <div className="WallList">
-        {walls.length > 0 ? walls : "No results match your search"}
-      </div>
-    </div>
+      <section className="WallList" role="list">
+        { walls.length < data.length && walls.length > 0 ? <p>Displaying {walls.length} of {data.length} walls: </p> : null }
+        {walls.length > 0 ? walls : "No results match your terms - try filtering by wall name (e.g. 'Bruise Brothers Wall')"}
+      </section>
+    </section>
   )
 }
 

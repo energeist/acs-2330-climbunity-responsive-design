@@ -9,12 +9,12 @@ function ClimbingRouteDetails(props) {
   const routeKey = location.pathname.replace('/route/','').split('-')[1]
   const currentRoute = props.props[`${wallKey}`].climbs[routeKey]
   return (
-    <div className="ClimbingRouteDetails">
-      <div className="ClimbingRouteDetails-image">
+    <article className="ClimbingRouteDetails">
+      <figure className="ClimbingRouteDetails-image" role="figure" aria-label="climbing route image">
         <img src={`${process.env.PUBLIC_URL}/images/wall${routeKey%7}.jpg`} alt="placeholder"/>
-      </div>
-      <div className="ClimbingRouteDetails-info">
-        <h1 className="ClimbingRouteDetails-name">{currentRoute.name}</h1>
+      </figure>
+      <section className="ClimbingRouteDetails-info" aria-label="Climbing route information">
+        <h2 className="ClimbingRouteDetails-name" aria-level="2">{currentRoute.name}</h2>
         <p className="ClimbingRouteDetails-grade"><strong>Grade:</strong>
           {currentRoute.grades.yds ? <span><strong>YDS</strong>  - {currentRoute.grades.yds} | </span> : ''}  
           {currentRoute.grades.french ? <span><strong>French</strong>  - {currentRoute.grades.french}</span> : ''} 
@@ -22,7 +22,7 @@ function ClimbingRouteDetails(props) {
         <p className="ClimbingRouteDetails-grade"><strong>Route type(s):</strong> {Object.keys(currentRoute.type)
           .map((type)=>{
             return(
-             <span key={type}>{type}</span> 
+             <span key={type}>{type}&nbsp;&nbsp;</span> 
             )
           })}</p>
         <p className="ClimbingRouteDetails-desc"><strong>Description: </strong>  
@@ -34,11 +34,11 @@ function ClimbingRouteDetails(props) {
         <p className="ClimbingRouteDetails-desc"><strong>Protection: </strong>
           {currentRoute.content.protection ? currentRoute.content.protection : "Nothing listed"}
         </p>
-        <p className="ClimbingRouteDetails-geo"><em><strong>lat:</strong>  </em>{currentRoute.metadata.lnglat.coordinates[1]} <em>lon: </em>{currentRoute.metadata.lnglat.coordinates[0]}</p>
+        <p className="ClimbingRouteDetails-geo" aria-label="Coordinates"><em><strong>lat:</strong>  </em>{currentRoute.metadata.lnglat.coordinates[1]} <em>lon: </em>{currentRoute.metadata.lnglat.coordinates[0]}</p>
         <p className="ClimbingRouteDetails-fa"><strong>First Ascent By: </strong> 
           {currentRoute.fa ? currentRoute.fa : "Nothing listed"}</p>
-      </div>
-    </div>
+      </section>
+    </article>
   )
 }
 

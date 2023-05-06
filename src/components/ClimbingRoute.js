@@ -9,45 +9,61 @@ function ClimbingRoute(props) {
   const wallKey = location.pathname.replace('/wall/','')
   const wallRoutes = allWalls[`${wallKey}`].climbs
   const routeNames = []
-  wallRoutes.forEach((climb) => routeNames.push(climb.name)) // do this because computer is hard (fixes indexing issue with filter)
+  wallRoutes.forEach((climb) => routeNames.push(climb.name)) // fixes filter indexes
   const routes = wallRoutes.filter((obj) => {
     const inName = obj.name.toLowerCase().includes(query.toLowerCase())
     const inYDSGrade = obj.grades.yds.toLowerCase().includes(query.toLowerCase())
     const inFrenchGrade = obj.grades.french.toLowerCase().includes(query.toLowerCase())
-    const inType = query.toLowerCase() in obj.type // this is a little jank but it works well enough, will search for 'sport', 'trad', 'aid' or 'tr'
+    const inType = query.toLowerCase() in obj.type
     return inName || inYDSGrade || inFrenchGrade || inType }).map((route, index) => {
     return (
-      <div className="RouteCard" key={route.name}>
+      <section className="RouteCard" key={route.name}>
         <img src={`${process.env.PUBLIC_URL}/images/wall${route.name.length%7}.jpg`} alt="placeholder" />
-        <div className="RouteCardContent">
+        <section className="RouteCardContent">
           <Link 
             className="ClimbingRoute-title"
             to={`/route/${wallKey}-${routeNames.indexOf(route.name)}-${(route.name).toLowerCase().split(' ').join('_')}`}
+            aria-label={`Route details for ${route.name}`}
           >
-            <h1>{route.name}</h1>
+            <h2>{route.name}</h2>
           </Link>
-          <p>Grade: 
+          <p aria-label={`Route grade for ${route.name}`}>Grade: 
             {route.grades.yds ? <span>YDS - {route.grades.yds}</span> : ''}
             {route.grades.french ? <span>French - {route.grades.french}</span> : ''}
           </p>
-        </div>
-      </div>
+        </section>
+      </section>
     )
   })
 
   return (
-    <div className="RouteSearch">
+    <section className="RouteSearch">
       <form>
+        <label htmlFor="routeSearch">
+          Search for a route by name, style, or grade:
+        </label>
         <input
+          id="routeSearch"
+          type="text"
           value={query}
-          placeholder="Search routes by name, style or grade:"
+          placeholder="Filter routes by name, style or grade:"
           onChange={(evt) => setQuery(evt.target.value)}
+          aria-label="Filter routes by name, style or grade"
         />
       </form>
-      <div className="RouteList">
-        {routes.length > 0 ? routes : "No results match your search"}
-      </div>
-    </div>
+      <section 
+        className="RouteList"
+        aria-live="assertive"
+        aria-relevant="additions"
+      >
+        { 
+          routes.length < wallRoutes.length && routes.length > 0 
+          ? <p aria-live="polite">Displaying {routes.length} of {wallRoutes.length} routes: </p> 
+          : null
+        }
+        {routes.length > 0 ? routes : "No results match your terms - You can filter by route name, style (e.g. 'sport', 'trad' or 'tr') or by grade (e.g. 5.11 or 7b+)"}
+      </section>
+    </section>
   )
 }
 export default ClimbingRoute;

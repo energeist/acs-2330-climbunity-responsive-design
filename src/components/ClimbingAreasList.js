@@ -26,18 +26,25 @@ function ClimbingAreaList(props) {
   })
   
   return (
-    <div className="RouteSearch">
+    <section className="RouteSearch" role="search">
       <form>
+        <label htmlFor="search-input">Filter areas in the Red River Gorge:</label>
         <input
+          id="search-input"
+          type="text"
           value={query}
-          placeholder="Search areas in the Red River Gorge:"
+          placeholder="Filter areas in the Red River Gorge:"
           onChange={(evt) => setQuery(evt.target.value)}
+          aria-label="Search input"
+          role="searchbox"
+          aria-controls="ClimbingAreasList"
         />
       </form>
-      <div className="ClimbingAreasList">
-        { areas.length > 0 ? areas : "No results match your search" }
-      </div>
-    </div>
+      <section className="ClimbingAreasList" role="list" aria-live="polite" id="ClimbingAreasList">
+        { areas.length < redRiverGorge.length && areas.length > 0 ? <p>Displaying {areas.length} of {redRiverGorge.length} areas: </p> : null}
+        { areas.length > 0 ? areas : "No results match your terms - you can filter by area name (e.g. 'Muir Valley')" }
+      </section>
+    </section>
   );
 }
 

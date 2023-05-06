@@ -3,10 +3,13 @@ import './About.css';
 
 function About() {
   return (
-    <div className="About">
-      <h1>About Climbunity</h1>
-      <p>Climbunity is an app that shows details for the climbing routes available in the Muir Valley area of Red River Gorge, Kentucky.  "The Red" is home to numerous sandstone cliffs that stand approximately 200ft tall and hosts some of the most highly rated climbing routes in the world.</p>
-    </div>
+    <article className="About">
+      <h2>About Climbunity</h2>
+      <p>Climbunity is your source for information regarding the many routes available in the Muir Valley 
+        area of Red River Gorge, Kentucky.  “The Red” is home ot numerous sandstone cliffs that stand approximately 
+        200ft tall and hosts some of the most highly rated climbing in the world.  Whether you’re a local keeping 
+        up with the latest or a visitor looking to send, Climbunity has you covered.</p>
+    </article>
   )
 }
 

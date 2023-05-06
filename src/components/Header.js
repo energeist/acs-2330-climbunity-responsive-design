@@ -10,22 +10,24 @@ function Header() {
   const location = useLocation()
   const navigate = useNavigate()
   return (
-    <div className='Header'>
+    <section className='Header' role="banner">
       <header>
         <img src={logo} alt="Climbunity Logo" />
-        <div className='Header-Subtitle'>
+        <h1 className='Header-Subtitle'>
           Climbing in the Red River Gorge
-        </div>
-        <div className="Header-Buttons">
+        </h1>
+        <section className="Header-Buttons" role="navigation" aria-label="Main Navigation">
           <NavLink 
             className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
             to="/"
+            aria-current={location.pathname === '/' ? "page" : null}
             >
               Climbing Areas
           </NavLink>
           <NavLink 
             className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
             to="/about"
+            aria-current={location.pathname === '/about' ? "page" : null}
             >
               About Climbunity
           </NavLink>
@@ -37,9 +39,9 @@ function Header() {
                 Go Back
             </NavLink>
           }
-        </div>
+        </section>
       </header>
-    </div>
+    </section>
   )
 }
 
