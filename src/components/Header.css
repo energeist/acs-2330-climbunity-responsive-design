@@ -1,7 +1,7 @@
 /*  src/Title.css  */
 .Header {
     box-sizing: border-box;
-    min-width: 100vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
