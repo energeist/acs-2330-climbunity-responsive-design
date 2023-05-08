@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './ClimbingRoute.css';
 
@@ -36,8 +36,16 @@ function ClimbingRoute(props) {
     )
   })
 
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
-    <section className="RouteSearch">
+    <section className="RouteSearch" ref={ref}>
       <form>
         <label htmlFor="routeSearch">
           Search for a route by name, style, or grade:
