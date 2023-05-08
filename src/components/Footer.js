@@ -25,6 +25,17 @@ function Footer() {
           <Modal.Title className="ModalTitle">Subscribe to our Newsletter!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <form action="" method="get" className="newsletterForm">
+            <section className="formField">
+              <label htmlFor="name">Enter your name: </label>
+              <input type="text" name="name" id="name" placeholder="Your Name Here"/>
+            </section>
+            <section className="formField">
+              <label htmlFor="email">Enter your email: </label>
+              <input type="email" name="email" id="email" placeholder="Your Email Here"/>
+            </section>
+            <button onClick={handleClose}>Subscribe!</button>
+          </form>
           {/* <SubscriptionForm closeModal={handleClose} /> */}
         </Modal.Body>
       </Modal>
