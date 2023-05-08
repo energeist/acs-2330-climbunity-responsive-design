@@ -25,7 +25,15 @@ function Footer() {
           <Modal.Title className="ModalTitle">Subscribe to our Newsletter!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <form action="" method="get" className="newsletterForm">
+          <section className="newsletterText">
+            <p>Get the latest news each month!</p>
+            <ul>
+              <li>New space listings</li>
+              <li>Up-to-date hours and amenities</li>
+              <li>Event listings</li>
+            </ul>
+          </section>
+          <form className="newsletterForm">
             <section className="formField">
               <label htmlFor="name">Enter your name: </label>
               <input type="text" name="name" id="name" placeholder="Your Name Here"/>
