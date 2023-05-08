@@ -8,7 +8,8 @@ import Modal from 'react-bootstrap/Modal';
 function Footer() {
   const [showModal, setShowModal] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = (evt) => {
+    evt.preventDefault();
     setShowModal(true);
   };
 
@@ -18,10 +19,10 @@ function Footer() {
 
   return (
     <section className='Footer' aria-label="footer">
-      <a href="#" onClick={handleClick}>Subscribe to our Newsletter!</a>
+      <button onClick={handleClick}>Subscribe to our Newsletter!</button>
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Subscribe</Modal.Title>
+          <Modal.Title className="ModalTitle">Subscribe to our Newsletter!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {/* <SubscriptionForm closeModal={handleClose} /> */}
