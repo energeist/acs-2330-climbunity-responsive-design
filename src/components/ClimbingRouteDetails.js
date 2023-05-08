@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import './ClimbingRouteDetails.css';
 
 function ClimbingRouteDetails(props) {
-  
   const location = useLocation()
   const wallKey = location.pathname.replace('/route/','').split('-')[0]
   const routeKey = location.pathname.replace('/route/','').split('-')[1]
