@@ -12,6 +12,11 @@ ACS-2330 Final Project
 - Updated design to be responsive to desktop / tablet / mobile viewing modes
 - Includes ARIA acessibility tags
 
+## User Stories:
+1) Shawn is planning a trip to Muir Valley and wants to quickly find some GPS coordinates for routes on his favourite walls
+2) Mark wants to get information about what kind gear is required to be able to climb in the Red River Gorge
+3) Mitchell loves to go to The Red, and wants to get updates on new climbing walls and current access issues, and maybe find someone to go climb with as well.
+
 ## Wireframes:
 
 Available on Figma: https://www.figma.com/file/O7My9tkn9279W7GH7KarIV/Climbunity?type=design&node-id=0-1&t=Ot1bfPpsfamosVTf-0
