@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import './ClimbingRouteDetails.css';
 
 function ClimbingRouteDetails(props) {
-  
   const location = useLocation()
   const wallKey = location.pathname.replace('/route/','').split('-')[0]
   const routeKey = location.pathname.replace('/route/','').split('-')[1]
@@ -15,7 +14,7 @@ function ClimbingRouteDetails(props) {
       </figure>
       <section className="ClimbingRouteDetails-info" aria-label="Climbing route information">
         <h2 className="ClimbingRouteDetails-name" aria-level="2">{currentRoute.name}</h2>
-        <p className="ClimbingRouteDetails-grade"><strong>Grade:</strong>
+        <p className="ClimbingRouteDetails-grade"><strong>Grade: </strong>
           {currentRoute.grades.yds ? <span><strong>YDS</strong>  - {currentRoute.grades.yds} | </span> : ''}  
           {currentRoute.grades.french ? <span><strong>French</strong>  - {currentRoute.grades.french}</span> : ''} 
         </p>

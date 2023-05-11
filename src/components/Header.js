@@ -17,28 +17,32 @@ function Header() {
           Climbing in the Red River Gorge
         </h1>
         <section className="Header-Buttons" role="navigation" aria-label="Main Navigation">
-          <NavLink 
-            className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
-            to="/"
-            aria-current={location.pathname === '/' ? "page" : null}
-            >
-              Climbing Areas
-          </NavLink>
-          <NavLink 
-            className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
-            to="/about"
-            aria-current={location.pathname === '/about' ? "page" : null}
-            >
-              About Climbunity
-          </NavLink>
-          { location.pathname === '/' ? '' :
+          <div className="PersistentNav">
             <NavLink 
-              className="nav-link"
-              onClick={handleClick}
+              className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
+              to="/"
+              aria-current={location.pathname === '/' ? "page" : null}
               >
-                Go Back
+                Climbing Areas
             </NavLink>
-          }
+            <NavLink 
+              className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
+              to="/about"
+              aria-current={location.pathname === '/about' ? "page" : null}
+              >
+                About Climbunity
+            </NavLink>
+          </div>
+          <div className="GoBack">
+            { location.pathname === '/' ? '' :
+              <NavLink 
+                className="nav-link"
+                onClick={handleClick}
+                >
+                  Go Back
+              </NavLink>
+            }
+          </div>
         </section>
       </header>
     </section>

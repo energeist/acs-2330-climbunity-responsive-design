@@ -19,10 +19,14 @@
   color: white;
 }
 
-label {
+section > form > label {
   display: none;
 }
 
 form {
   margin-top: 1em;
+}
+
+h1, h2 {
+  font-weight: 900;
 }

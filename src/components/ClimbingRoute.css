@@ -4,12 +4,12 @@
   grid-gap: 2.5em;
   max-width: 1200px;
   margin: auto;
-  padding: 2em;
+  padding: 2em 0;
 }
 
 .RouteCard {
-  width: 324px;
-  height: 324px;
+  width: 325px;
+  height: 325px;
   margin: auto;
   border: 4px solid rgba(126, 124, 124, 0.6);
   border-radius: 1%;
@@ -19,23 +19,17 @@
   z-index: 1;
 }
 
-.RouteCard > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 35%;
-  object-fit: fill;
-}
-
 .RouteCardContent {
+  display: flex;
+  flex-direction: column;
   padding: 2em;
+  align-content: space-evenly;
+  max-height: 100%;
 }
 
 .RouteCardContent > p {
   display: flex;
   flex-direction: column;
-  margin: 1em;
   font-size: 1.5em;
   color: rgb(0,44,0);
 }
@@ -56,6 +50,7 @@
   height: 100%;
   z-index: -1;
   opacity: 35%;
+  object-fit: fill;
 }
 
 .RouteSearch form input, .RouteSearch form button {
@@ -66,12 +61,9 @@
 }
 
 .RouteSearch form input {
+  flex: 1;
   min-width: 100px;
   width: 90%;
-}
-
-.RouteSearch form input {
-  flex: 1;
 }
 
 /* smaller screens and tbalets */
@@ -82,12 +74,18 @@
 }
 
 /* Small screens mobile */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 760px) {
   .RouteList {
     grid-template-columns: 1fr;
   }
+
   .RouteSearch {
     flex: 1;
     margin: auto;
+  }
+
+  .RouteSearchForm {
+    margin: auto;
+    width: 90vw;
   }
 }

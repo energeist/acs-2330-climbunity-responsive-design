@@ -12,3 +12,25 @@
   align-self: flex-end;
   z-index: 1;
 }
+
+.newsletterButton {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+}
+
+.formField > input {
+  width: 90%;
+}

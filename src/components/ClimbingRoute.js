@@ -31,6 +31,12 @@ function ClimbingRoute(props) {
             {route.grades.yds ? <span>YDS - {route.grades.yds}</span> : ''}
             {route.grades.french ? <span>French - {route.grades.french}</span> : ''}
           </p>
+          <p aria-label={`Route styles for ${route.name}`}>Style(s): 
+          {Object.keys(route.type)
+          .map((type)=>{
+            return(
+             <span key={type}>{type}&nbsp;&nbsp;</span> 
+            )})}</p>
         </section>
       </section>
     )
@@ -46,7 +52,7 @@ function ClimbingRoute(props) {
 
   return (
     <section className="RouteSearch" ref={ref}>
-      <form>
+      <form className="RouteSearchForm">
         <label htmlFor="routeSearch">
           Search for a route by name, style, or grade:
         </label>

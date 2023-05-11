@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ClimbingWall.css';
 
@@ -31,7 +31,7 @@ function ClimbingWall(props) {
 
   return (
     <section className="RouteSearch" aria-label="Wall search">
-      <form role="search">
+      <form className="WallSearchForm" role="search">
         <label htmlFor="wall-search">Filter walls by name:</label>
         <input
           value={query}
