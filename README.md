@@ -17,6 +17,13 @@ ACS-2330 Final Project
 2) Mark wants to get information about what kind gear is required to be able to climb in the Red River Gorge
 3) Mitchell loves to go to The Red, and wants to get updates on new climbing walls and current access issues, and maybe find someone to go climb with as well.
 
+## Lighthouse Scores:
+Desktop view:
+![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/3caa2a75-21cc-4838-9ddb-6dab15409a77)
+
+Mobile view:
+![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/cb03e3b8-da19-4c66-b8d1-7867ca2753c9)
+
 ## Wireframes:
 
 Available on Figma: https://www.figma.com/file/O7My9tkn9279W7GH7KarIV/Climbunity?type=design&node-id=0-1&t=Ot1bfPpsfamosVTf-0
