@@ -19,35 +19,45 @@ Available on Figma: https://www.figma.com/file/O7My9tkn9279W7GH7KarIV/Climbunity
 ### Desktop views:
 
 Landing / Area page:
+
 ![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/97982025-05b1-4a68-b6f7-dfe1f09ccc19)
 
 Wall page:
+
 ![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/c719e17b-341c-4712-856e-5b86e85b6714)
 
 Wall / Route page w/ subsciption modal open:
+
 ![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/57c1d6f3-91f0-48a1-b5bd-1de75392ef42)
 
 Route details:
+
 ![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/645e2790-c053-41bc-8edf-de61c24ba7df)
 
 About page:
+
 ![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/f90a2f5a-c257-4443-a8e8-04095c483f64)
 
 ### Mobile views:
 
 Landing / Area page:
+
 ![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/ddb03ff9-507d-45a4-b256-583a0c6632d4)
 
 Wall page:
+
 ![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/07de6a08-5015-44bb-941d-f87c16ad58d7)
 
 Wall / Route page w/ subsciption modal open:
+
 ![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/18048ae5-950b-4eb4-b995-4d297d1c8c30)
 
 Route details:
+
 ![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/56168bc3-3451-4889-9344-8ed718a9c219)
 
 About page:
+
 ![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/eb497fe4-d59e-47f8-9e2a-905a1ba3c44e)
 
 ## Project structure
