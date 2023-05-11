@@ -18,13 +18,18 @@ Available on Figma: https://www.figma.com/file/O7My9tkn9279W7GH7KarIV/Climbunity
 
 ### Desktop views:
 
+
 Landing / Area page:
+![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/97982025-05b1-4a68-b6f7-dfe1f09ccc19)
 
 Wall page:
+![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/c719e17b-341c-4712-856e-5b86e85b6714)
 
 Wall / Route page w/ subsciption modal open:
+![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/57c1d6f3-91f0-48a1-b5bd-1de75392ef42)
 
 Route details:
+![image](https://github.com/energeist/acs-2330-climbunity-responsive-design/assets/111889289/645e2790-c053-41bc-8edf-de61c24ba7df)
 
 About page:
 
